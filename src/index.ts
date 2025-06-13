@@ -295,9 +295,9 @@ server.tool(
       .describe(
         "The absolute path to the directory where images/assets are stored in the project. If the directory does not exist, it will be created. The format of this path should respect the directory format of the operating system you are running on. Don't use any special character escaping in the path name either.",
       ),
-    assetType: z.enum(["svg", "png", "pdf", "jpg"])
+    assetType: z.enum(["svg", "png", "pdf", "jpg", "webp"])
       .describe(
-        "The desired format of the asset to download. Must be one of 'svg', 'png', 'jpg', or 'pdf'. Choose the format most suitable for the project's needs or as indicated by design specifications. If unsure, 'svg' is often preferred for vector graphics and 'png' for bitmaps.",
+        "The desired format of the asset to download. Must be one of 'svg', 'png', 'jpg', 'webp', or 'pdf'. Choose the format most suitable for the project's needs or as indicated by design specifications. If unsure, 'webp' is often preferred.",
       ),
   },
   async ({ layerSourceId, localPath, assetType }) => {
